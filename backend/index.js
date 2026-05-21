@@ -21,10 +21,9 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://tera-vercel-frontend-url.vercel.app",
+  origin: "https://store-app-ten-rho.vercel.app",  // ← yeh daalo
   credentials: true,
 }));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
