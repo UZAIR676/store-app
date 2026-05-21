@@ -39,9 +39,31 @@ const ProductList = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!name || !description || !price || !category || !quantity || !brand) {
+      toast.error("Please fill all fields");
+      return;
+    }
+
+    if (!image) {
+      toast.error("Please upload an image");
+      return;
+    }
+
     try {
-      const productData = { image, name, description, price, category, quantity, brand, countInStock: stock };
+      const productData = {
+        image,
+        name,
+        description,
+        price,
+        category,
+        quantity,
+        brand,
+        countInStock: stock,
+      };
+
       const { data } = await createProduct(productData);
+
       if (data.error) {
         toast.error(data.error);
       } else {
@@ -72,7 +94,6 @@ const ProductList = () => {
       <AdminMenu />
       <div className="xl:ml-16 px-6 py-10">
         <div className="max-w-3xl mx-auto">
-          {/* Header */}
           <div className="flex items-center gap-4 mb-8">
             <div className="w-1 h-8 bg-pink-500 rounded-full" />
             <div>
