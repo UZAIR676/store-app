@@ -138,16 +138,6 @@ const Profile = () => {
               </svg>
               Save Changes
             </button>
-
-            <Link
-              to="/user-orders"
-              className="flex-1 flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 transition-all duration-200 text-gray-300 hover:text-white font-semibold rounded-full py-3 text-sm"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
-              My Orders
-            </Link>
           </div>
         </form>
 
